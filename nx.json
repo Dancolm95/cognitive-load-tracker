@@ -1,4 +1,37 @@
 {
   "npmScope": "cognitive",
-  "affected": { "defaultBase": "main" }
+  "affected": {
+    "defaultBase": "main"
+  },
+  "plugins": [
+    {
+      "plugin": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
+      }
+    },
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      },
+      "exclude": ["gateway-ms-e2e/**/*", "load-model-ms-e2e/**/*"]
+    }
+  ],
+  "projects": {
+    "gateway-ms": "apps/gateway-ms",
+    "load-model-ms": "apps/load-model-ms"
+  },
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "nxCloudId": "686dc88670e9003b92216459"
 }
