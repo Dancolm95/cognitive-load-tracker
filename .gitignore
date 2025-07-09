@@ -1,0 +1,45 @@
+# === Node.js ===
+node_modules/
+dist/
+*.log
+.env
+.env.*
+
+# === Python / ML ===
+__pycache__/
+*.py[cod]
+*.onnx
+*.pkl
+*.h5
+
+# Optional: exclude raw training data
+model/data/
+model/trained/*.onnx
+
+# === VS Code ===
+.vscode/
+.history/
+
+# === Build artifacts ===
+*.out
+*.exe
+*.dll
+
+# === macOS ===
+.DS_Store
+
+# === Linux ===
+*.swp
+
+# === Windows ===
+Thumbs.db
+desktop.ini
+
+# === Coverage / Reports ===
+coverage/
+.nyc_output/
+*.lcov
+
+# === Docker ===
+*.local.env
+docker-compose.override.yml
