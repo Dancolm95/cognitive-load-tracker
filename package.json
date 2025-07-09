@@ -1,0 +1,14 @@
+{
+  "name": "cognitive-load-tracker",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "nx": "nx",
+    "postinstall": "nx connect-to-nx-cloud"
+  },
+  "devDependencies": {
+    "nx": "latest",
+    "prettier": "latest",
+    "typescript": "^5.0.0"
+  }
+}
