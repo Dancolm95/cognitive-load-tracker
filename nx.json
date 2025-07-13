@@ -3,17 +3,11 @@
   "affected": {
     "defaultBase": "main"
   },
+  "workspaceLayout": {
+    "appsDir": "apps",
+    "libsDir": "libs"
+  },
   "plugins": [
-    {
-      "plugin": "@nx/webpack/plugin",
-      "options": {
-        "buildTargetName": "build",
-        "serveTargetName": "serve",
-        "previewTargetName": "preview",
-        "buildDepsTargetName": "build-deps",
-        "watchDepsTargetName": "watch-deps"
-      }
-    },
     {
       "plugin": "@nx/eslint/plugin",
       "options": {
@@ -25,13 +19,29 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["gateway-ms-e2e/**/*", "load-model-ms-e2e/**/*"]
+      "exclude": [
+        "gateway-ms-e2e/**/*",
+        "load-model-ms-e2e/**/*",
+        "gateway-ms-e2e/**/*",
+        "gateway-ms-e2e/**/*",
+        "apps-e2e/**/*",
+        "e2e/**/*",
+        "apps-e2e/**/*",
+        "apps/gateway-ms-e2e/**/*"
+      ]
+    },
+    {
+      "plugin": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "webpack:build",
+        "serveTargetName": "webpack:serve",
+        "previewTargetName": "preview",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
+      }
     }
   ],
-  "projects": {
-    "gateway-ms": "apps/gateway-ms",
-    "load-model-ms": "apps/load-model-ms"
-  },
+  "projects": {},
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "nxCloudId": "686dc88670e9003b92216459"
 }

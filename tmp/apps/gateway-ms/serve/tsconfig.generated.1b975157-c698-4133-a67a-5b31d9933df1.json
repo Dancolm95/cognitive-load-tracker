@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "paths": {}
+  },
+  "extends": "..\\..\\..\\..\\apps\\gateway-ms\\tsconfig.app.json"
+}
