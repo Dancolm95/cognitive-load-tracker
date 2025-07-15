@@ -6,7 +6,9 @@
 import { Logger } from '@nestjs/common'
 import { NestFactory } from '@nestjs/core'
 import { AppModule } from './app/app.module'
-import { IoAdapter } from '@nestjs/platform-socket.io'
+// import { IoAdapter } from '@nestjs/platform-socket.io'
+import { CustomSocketIoAdapter } from './socket-io.adapter';
+
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule)
@@ -17,7 +19,7 @@ async function bootstrap() {
   });
 
   //Habilita websocket
-  app.useWebSocketAdapter(new IoAdapter(app))
+  app.useWebSocketAdapter(new CustomSocketIoAdapter(app))
 
   const globalPrefix = 'api'
   app.setGlobalPrefix(globalPrefix)
