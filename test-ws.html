@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test WS</title>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  </head>
+  <body>
+    <h1>WebSocket Test</h1>
+    <script>
+      const socket = io("ws://localhost:3000/events");
+
+      socket.on("connect", () => {
+        console.log("✅ Conectado a /events");
+        socket.emit("ping", { test: "mensaje desde HTML" }, (respuesta) => {
+          console.log("🔁 Respuesta recibida:", respuesta);
+        });
+      });
+
+      socket.on("disconnect", () => {
+        console.log("❌ Desconectado");
+      });
+    </script>
+  </body>
+</html>
