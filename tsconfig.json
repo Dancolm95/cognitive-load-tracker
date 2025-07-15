@@ -16,7 +16,5 @@
     "paths": {},
     "esModuleInterop": true
   },
-  "files": [],
-  "include": [],
   "exclude": ["node_modules", "tmp"]
 }
