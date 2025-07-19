@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    popup: './src/popup.ts',
+    popup: './src/popup.tsx',
     background: './src/background.ts'
   },
   output: {
@@ -11,12 +11,12 @@ module.exports = {
     clean: true
   },
   resolve: {
-    extensions: ['.ts', '.js']
+    extensions: ['.ts', '.js', '.tsx']
   },
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.tsx?$/, //admite .ts y .tsx
         use: 'ts-loader',
         exclude: /node_modules/
       }

@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Cognitive Load Tracker",
+  "description": "Detecta tu carga mental mientras programas.",
+  "version": "0.1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/CLT-16x16.png",
+      "48": "assets/CLT-32x32.png",
+      "128": "assets/CLT-192x192.png"
+    }
+  }
+}

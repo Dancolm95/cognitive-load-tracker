@@ -10,9 +10,17 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/socket.io-client": "^3.0.0",
     "ts-loader": "^9.5.2",
     "typescript": "^5.8.3",
-    "webpack": "^5.100.1",
+    "webpack": "^5.100.2",
     "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "socket.io-client": "^4.8.1"
   }
 }
