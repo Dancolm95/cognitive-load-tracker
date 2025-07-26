@@ -16,6 +16,13 @@
   "48": "assets/CLT-32x32.png",
   "128": "assets/CLT-192x192.png"
 },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dist/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
   "background": {
     "service_worker": "dist/background.js",
     "type": "module"
