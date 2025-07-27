@@ -1,0 +1,23 @@
+{
+  "name": "chrome-extension",
+  "projectType": "application",
+  "sourceRoot": "apps/chrome-extension/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/chrome-extension",
+        "index": "apps/chrome-extension/popup.html",
+        "main": "apps/chrome-extension/src/background.ts",
+        "tsConfig": "apps/chrome-extension/tsconfig.json",
+        "webpackConfig": "apps/chrome-extension/webpack.config.js",
+        "assets": [
+          "apps/chrome-extension/manifest.json",
+          "apps/chrome-extension/popup.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

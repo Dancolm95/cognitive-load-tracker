@@ -23,7 +23,23 @@ document.addEventListener('mousemove', (e) => {
       y: e.clientY,
       timestamp: now
     };
-    chrome.runtime.sendMessage(event);
+    chrome.runtime.sendMessage({
+      type: "user-event",
+      payload,
+    });
     lastSent = now;
   }
 });
+
+document.addEventListener("keydown", (e) => {
+  const payload = {
+    type: "keydown",
+    timestamp: Date.now(),
+    key: e.key,
+  };
+
+  chrome.runtime.sendMessage({
+    type: "user-event",
+    payload,
+  });
+})
